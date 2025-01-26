@@ -40,7 +40,7 @@ jobs:
         run: npm install
 
       - name: Build Angular
-        run: npm run build -- --configuration production 
+        run: ng build --configuration production --base-href /ot-service-angular/
         # Ajusta el --base-href si necesitas que tu app funcione en /NOMBRE_REPO/
 
       - name: Archivos Compilados
@@ -49,7 +49,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'dist/ot-service-angular'
+          path: 'dist/ot-service-angular/browser'
 
       - name: Deploy to GitHub Pages
         id: deployment
