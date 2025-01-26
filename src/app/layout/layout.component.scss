@@ -1,0 +1,17 @@
+.layout {
+  display: grid;
+  grid-template-columns: 200px 1fr;      /* Menú a la izq, contenido a la der */
+  grid-template-rows: 60px auto 40px;   /* Cabecera (60px), contenido, footer (40px) */
+  grid-template-areas:
+    "header header"
+    "sidebar content"
+    "footer footer";
+
+  min-height: 100vh;
+}
+
+/* Asignar cada “app-xxx” a su área */
+.layout app-header  { grid-area: header; }
+.layout app-sidebar { grid-area: sidebar; }
+.layout app-content { grid-area: content; }
+.layout app-footer  { grid-area: footer; }
