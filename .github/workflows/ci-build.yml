@@ -1,8 +1,6 @@
 name: CI Build
 
 on:
-  push:
-    branches: [ main ]
   pull_request:
     branches: [ main ]
   workflow_dispatch:
@@ -24,9 +22,3 @@ jobs:
 
       - name: Build Angular
         run: npm run build -- --configuration production
-
-      - name: Upload build artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: dist-files
-          path: dist
