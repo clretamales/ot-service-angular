@@ -40,7 +40,7 @@ jobs:
         run: npm install
 
       - name: Build Angular
-        run: ng build --configuration production --base-href /ot-service-angular/
+        run: npm run build -- --configuration production --base-href /ot-service-angular/
         # Ajusta el --base-href si necesitas que tu app funcione en /NOMBRE_REPO/
 
       - name: Archivos Compilados
