@@ -1,8 +1,9 @@
 :host {
   display: block;
-  background-color: #fafafa;     /* O var(--color-bg), si prefieres */
+  background-color: #fafafa;  /* Fondo claro */
+  border-right: 1px solid #ddd; /* Separador vertical */
+  width: 200px;  /* Ancho fijo o ajustable */
   padding: 1rem;
-  border-right: 1px solid #ddd;  /* Separador vertical opcional */
 }
 
 ul {
@@ -12,14 +13,26 @@ ul {
 }
 
 li {
-  margin: 0.5rem 0;
+  margin-bottom: 0.5rem;
 }
 
 a {
-  color: var(--color-secondary); /* Azul en los enlaces */
+  color: var(--color-secondary);     /* Podrías usar tu variable de color (ej. azul) */
   text-decoration: none;
+  font-weight: 500;
+  display: block;
+  padding: 0.25rem 0;
 }
 
 a:hover {
   text-decoration: underline;
+}
+
+/* Si 'routerLinkActive' aplica la clase 'active', puedes personalizarla aquí */
+.active {
+  font-weight: 700;
+  color: var(--color-primary);       /* por ejemplo, morado si estás usando .NET/Azure style */
+  text-decoration: none;
+  border-left: 4px solid var(--color-primary);
+  padding-left: 0.5rem;
 }
